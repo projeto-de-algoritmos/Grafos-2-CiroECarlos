@@ -2,10 +2,14 @@ let rows = 10;
 let cols = 10;
 let grid = [];
 
-const simulate = document.getElementById("simulate-btn");
-simulate.addEventListener("click", () => {
-      console.log("Simulando");
-    });
+const simulateBtn = document.getElementById("simulate-btn");
+const playerBtn = document.getElementById("player-btn");
+const wallBtn = document.getElementById("wall-btn");
+const objectiveBtn = document.getElementById("objective-btn");
+simulateBtn.addEventListener("click", () => {console.log("Simulando")});
+playerBtn.addEventListener("click", () => {console.log("PLayer")});
+wallBtn.addEventListener("click", () => {console.log("Parede")});
+objectiveBtn.addEventListener("click", () => {console.log("Objetivo")});
 
 function setup() {
   let canvas = createCanvas(400, 400);
