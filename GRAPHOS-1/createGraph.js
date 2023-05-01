@@ -1,3 +1,7 @@
+var graph = [];
+var grid = [];
+
+
 function createGraph(n, noEdgesPositions) {
     let graph = {};
   

@@ -1,4 +1,4 @@
-export function dfs(graph, startNode, goalNode) {
+function dfsl(graph, startNode, goalNode) {
     let visited = new Set();
     let stack = [startNode];
   
@@ -10,6 +10,10 @@ export function dfs(graph, startNode, goalNode) {
       }
   
       if (!visited.has(currentNode)) {
+        let [x,y] = currentNode.toString().split('').map(Number);
+        if (![1,2,3].includes(grid[x][y])) {
+          grid[x][y] = 4;
+        }
         visited.add(currentNode);
         let neighbors = graph[currentNode];
   

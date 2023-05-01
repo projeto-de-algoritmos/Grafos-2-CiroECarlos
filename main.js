@@ -1,8 +1,11 @@
 let gridSize = 10;
 let rows = gridSize;
 let cols = gridSize;
-let grid = [];
-let graph = [];
+// var grid = [];
+/* `var grid = [];` is initializing an empty array called `grid`. This array will be used to store the
+state of the grid, where each element represents a cell in the grid. The array will be populated
+with values later on as the user interacts with the grid. */
+// let graph = [];
 let playerPosition = null;
 let goalPosition = null;
 let wallsPositions = [];
@@ -32,7 +35,8 @@ function setup() {
   goalBtn.mouseClicked(() => (selectedObject = "goal"));
   dfs.mouseClicked(() => {
     graph = createGraph(gridSize,wallsPositions)
-    console.log(graph);
+    var a = dfsl(graph,playerPosition,goalPosition)
+    console.log(a);
     });
   closeModal.mouseClicked(() => {
     modal.hide();
