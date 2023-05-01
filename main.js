@@ -3,7 +3,8 @@ let cols = 10;
 let grid = [];
 
 function setup() {
-  createCanvas(400, 400);
+  let canvas = createCanvas(400, 400);
+  canvas.parent('canvas-container')
   for (let i = 0; i < rows; i++) {
     grid[i] = [];
     for (let j = 0; j < cols; j++) {
