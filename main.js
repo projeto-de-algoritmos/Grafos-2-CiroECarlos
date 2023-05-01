@@ -2,6 +2,7 @@ let gridSize = 10;
 let rows = gridSize;
 let cols = gridSize;
 let grid = [];
+let graph = [];
 let playerPosition = null;
 let goalPosition = null;
 let wallsPositions = [];
@@ -24,10 +25,15 @@ function setup() {
   closeModal = select("#close-modal");
   modalText = select("#modal-text");
   modal = select("#modal-container");
+  dfs = select("#dfs");
   canvas.mouseClicked(clickGrid);
   playerBtn.mouseClicked(() => (selectedObject = "player"));
   wallBtn.mouseClicked(() => (selectedObject = "wall"));
   goalBtn.mouseClicked(() => (selectedObject = "goal"));
+  dfs.mouseClicked(() => {
+    graph = createGraph(gridSize,wallsPositions)
+    console.log(graph);
+    });
   closeModal.mouseClicked(() => {
     modal.hide();
   });
