@@ -2,6 +2,11 @@ let rows = 10;
 let cols = 10;
 let grid = [];
 
+const simulate = document.getElementById("simulate-btn");
+simulate.addEventListener("click", () => {
+      console.log("Simulando");
+    });
+
 function setup() {
   let canvas = createCanvas(400, 400);
   canvas.parent('canvas-container')
