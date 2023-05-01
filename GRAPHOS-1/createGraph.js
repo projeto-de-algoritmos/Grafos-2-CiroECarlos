@@ -1,4 +1,4 @@
-export function createGraph(n, noEdgesPositions) {
+function createGraph(n, noEdgesPositions) {
     let graph = {};
   
     for (let i = 0; i < n; i++) {
