@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Projeto PA</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
-    <script src='main.js'></script>
-</head>
-<body>
+    <script src="GRAPHOS-1/createGraph.js"></script>
+    <script src="GRAPHOS-1/dfs.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
     <div class="main">
+      <div class="header-wrapper">
+        <div class="header-container">
+          <a
+            class="student"
+            href="https://github.com/CaduRoriz"
+            target="_blank"
+          >
+            <h2>Carlos Eduardo Miranda Roriz</h2>
+            <h4>190011424</h4>
+          </a>
 
-        <div class = "header-wrapper">
-            
-            <div class = "header-container"> 
-                
-                <a class="student" href="https://github.com/CaduRoriz" target="_blank">
-                    <h2>Carlos Eduardo Miranda Roriz</h2>
-                        <h4>190011424</h4>
-                </a>
-                
-                <a class="student" href="https://github.com/ciro-c" target="_blank">
-                    <h2>Ciro Costa de Araujo</h2>
-                    <h4>190011611</h4>
-                </a>
-    
-            </div>
-    
+          <a class="student" href="https://github.com/ciro-c" target="_blank">
+            <h2>Ciro Costa de Araujo</h2>
+            <h4>190011611</h4>
+          </a>
+        </div>
+      </div>
+
+      <div class="home">
+        <div class="story">
+          <p>
+            O Carlos Eduardo está MUITO MAL na matéria de Projeto de Algoritmos!
+            Para resolver esse problema, ele quer pedir ao seu amigo Ciro que o
+            ajude. Mas para isso, ele precisa que você o auxilie a achar o Ciro
+            pelos corredores da FGA, que por muitas vezes podem ser um
+            labirinto. Realizaremos essa tarefa utilizando alguns algoritmos de
+            busca.
+          </p>
+
+          <div>
+            <h3>Como funciona:</h3>
+
+            <p>Selecione o local onde o Carlos e o Ciro ficarão.</p>
+            <p>
+              Se desejar dificultar a tarefa do Carlos, coloque paredes no
+              trajeto.
+            </p>
+            <p>Selecione qual método de busca você deseja utilizar.</p>
+            <p>
+              O caminho percorrido pelo Carlos Eduardo até achar o Ciro ficará
+              pintado.
+            </p>
+          </div>
         </div>
 
-        <div class="home">
-            
-            <div class="story">
-
-                <p>O Carlos Eduardo está MUITO MAL na matéria de Projeto de Algoritmos!
-                    Para resolver esse problema, ele quer pedir ao seu amigo Ciro que o ajude. 
-                    Mas para isso, ele precisa que você o auxilie a achar o Ciro pelos corredores
-                     da FGA, que por muitas vezes podem ser um labirinto. Realizaremos essa tarefa utilizando alguns algoritmos de busca.
-                </p>
-                
-                <div> 
-                    <h3>Como funciona:</h3>
-       
-                        <p>Selecione o local onde o Carlos e o Ciro ficarão. </p>
-                        <p> Se desejar dificultar a tarefa do Carlos, coloque paredes no trajeto. </p>
-                        <p>Selecione qual método de busca você deseja utilizar.</p>
-                        <p>O caminho percorrido pelo Carlos Eduardo até achar o Ciro ficará pintado. </p>
-                    
-                </div>
-
+        <div class="maze-wrapper">
+          <div class="buttons-wrapper">
+            <h3>Selecione:</h3>
+            <div class="buttons-container">
+              <button id="player-btn">
+                <h4>Carlos</h4>
+              </button>
+              <button id="wall-btn">
+                <h4>Parede</h4>
+              </button>
+              <button id="goal-btn">
+                <h4>Ciro</h4>
+              </button>
             </div>
-            
-        
-           <div class="maze-wrapper">
-                <div class= "buttons-wrapper">
-                    <h3>Selecione:</h3>
-                    <div class="buttons-container">
-                        <button id="player-btn"><h4>Carlos</h4></button>
-                        <button id="wall-btn"><h4>Parede</h4></button>
-                        <button id="objective-btn"><h4>Ciro</h4></button>
-                    </div>
-                </div>
+          </div>
 
-                <div id="canvas-container" class = "canva"></div>
+          <div id="canvas-container" class="canva"></div>
 
-                <div class="functions-wrapper">
-                    <h3>Algoritmos:</h3>
-                    <button class="dfs"><h4>Profundidade</h4></button>
-                </div>
-        
-
-           </div>
-           
-            
-
+          <div class="functions-wrapper">
+            <h3>Algoritmos:</h3>
+            <button id="dfs" class="dfs">
+              <h4>Profundidade</h4>
+            </button>
+          </div>
         </div>
+      </div>
 
-        
-
-        
-    
+      <div id="modal-container">
+        <div id="modal" class="modal">
+          <div class="modal-header">
+            <h2>Erro</h2>
+          </div>
+          <div class="modal-body">
+            <p id="modal-text">This is the default text for the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button id="close-modal">Fechar</button>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+</html>
