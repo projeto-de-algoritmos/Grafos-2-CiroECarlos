@@ -44,7 +44,7 @@ function setup() {
   for (let i = 0; i < rows; i++) {
     grid[i] = [];
     for (let j = 0; j < cols; j++) {
-      grid[i][j] = false;
+      grid[i][j] = 0;
     }
   }
 }

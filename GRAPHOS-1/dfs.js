@@ -11,7 +11,7 @@ function dfsl(graph, startNode, goalNode) {
   
       if (!visited.has(currentNode)) {
         let [x,y] = currentNode.toString().split('').map(Number);
-        if (![1,2,3].includes(grid[x][y])) {
+        if (![1,2,3].some(i=>i===grid[x][y])) {
           grid[x][y] = 4;
         }
         visited.add(currentNode);
