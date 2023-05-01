@@ -271,9 +271,9 @@ button:hover::after{
     border-radius: 0.3rem;
 }
 
-#close-btn {
-    background-color: #f44336;
-    color: white;
+#close-modal {
+    /* background-color: #f44336; */
+    color: black;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.3rem;
