@@ -6,7 +6,7 @@
     height: 100%;
     align-items: center;
     
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .cabecalho{
@@ -18,5 +18,5 @@
 
 .maze-container{
     display: flex;
-   
+    gap: 1rem;
 }
