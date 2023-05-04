@@ -36,3 +36,5 @@ O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o pont
  <p>Selecione o local onde será o ponto de partida e o ponto de chegada. </p>
                         <p>Selecione qual método de busca você deseja utilizar.(por enquanto apenas por profundidade)</p>
                         <p>O caminho percorrido até o ponto de chegada ficará colorido </p>
+<p>-----------------------------------------------------------------------------------------------</p>
+<p>Caso o pages esteja bugado, apenas clone o repositório e abra o index.html pelo seu navegador. Não há necessidade de fazer qualquer tipo de instalação.</p>
