@@ -4,6 +4,7 @@ Tema:
 
 # Labirinto
 
+Link do pages: https://caduroriz.github.io/PA-2023-01/
 **Número da Lista**: 1<br>
 **Conteúdo da Disciplina**: Grafos<br>
 
@@ -20,7 +21,11 @@ O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o pont
 
 ## Screenshots
 
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![Tela inicial](//img/img1.png)
+
+![Posições escolhidas](//img/img2.png)
+
+![Caminho traçado](//img/img3.png)
 
 ## Instalação
 
@@ -29,6 +34,5 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 ## Uso
 
  <p>Selecione o local onde será o ponto de partida e o ponto de chegada. </p>
-                        <p> Coloque, ou não paredes como obstáculos. </p>
-                        <p>Selecione qual método de busca você deseja utilizar.</p>
+                        <p>Selecione qual método de busca você deseja utilizar.(por enquanto apenas por profundidade)</p>
                         <p>O caminho percorrido até o ponto de chegada ficará colorido </p>

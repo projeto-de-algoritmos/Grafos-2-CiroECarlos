@@ -278,3 +278,7 @@ button:hover::after{
     border: none;
     border-radius: 0.3rem;
 }
+
+#wall-btn{
+  display: none;
+}
