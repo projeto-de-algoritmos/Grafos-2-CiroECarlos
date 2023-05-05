@@ -25,6 +25,10 @@ O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o pont
 <img src="img/img2.png" alt="Posições escolhidas" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 <img src="img/img3.png" alt="Caminho traçado" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
+## Vídeo demo
+[!Video usabilidade](https://user-images.githubusercontent.com/54088490/236570022-77f872a3-1f39-4afc-90a3-2dd1a482191f.mp4)
+
+
 ## Instalação
 
 Clone o repositório.
