@@ -22,6 +22,7 @@ O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o pont
 ## Screenshots
 
 ![Tela inicial](//img/img1.png)
+<img src="img/img1.png" alt="test">
 
 ![Posições escolhidas](//img/img2.png)
 
