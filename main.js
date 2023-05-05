@@ -28,16 +28,34 @@ function setup() {
   closeModal = select("#close-modal");
   modalText = select("#modal-text");
   modal = select("#modal-container");
-  dfs = select("#dfs");
+  dfsBtn = select("#dfs");
+  bfsBtn = select("#bfs");
   canvas.mouseClicked(clickGrid);
   playerBtn.mouseClicked(() => (selectedObject = "player"));
   wallBtn.mouseClicked(() => (selectedObject = "wall"));
   goalBtn.mouseClicked(() => (selectedObject = "goal"));
-  dfs.mouseClicked(() => {
-    graph = createGraph(gridSize,wallsPositions)
-    var a = dfsl(graph,playerPosition,goalPosition)
-    console.log(a);
-    });
+  dfsBtn.mouseClicked(() => {
+    if (canEdit && playerPosition !== null) {
+      canEdit = false;
+      cleanGrid();
+      graph = createGraph(gridSize, wallsPositions);
+      dfs(graph, playerPosition, goalPosition);
+    } else {
+      cleanGrid();
+      canEdit = true;
+    }
+  });
+  bfsBtn.mouseClicked(() => {
+    if (canEdit && playerPosition !== null) {
+      canEdit = false;
+      cleanGrid();
+      graph = createGraph(gridSize, wallsPositions);
+      bfs(graph, playerPosition, goalPosition);
+    } else {
+      cleanGrid();
+      canEdit = true;
+    }
+  });
   closeModal.mouseClicked(() => {
     modal.hide();
   });
@@ -54,40 +72,21 @@ function draw() {
   drawGrid();
 }
 
-//paint
-// 0: blank
-// 1: wall
-// 2: player
-// 3: goal
-// 4: path
-function drawGrid() {
-  let cellWidth = width / cols;
-  let cellHeight = height / rows;
+function cleanGrid() {
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      switch (grid[i][j]) {
-        case 1:
-          fill(0, 0, 0);
-          break;
-        case 2:
-          fill(0, 255, 0);
-          break;
-        case 3:
-          fill(0, 0, 255);
-          break;
-        case 4:
-          fill(122, 122, 0);
-          break;
-        default:
-          fill(255);
-          break;
+      if (grid[i][j] === 4) {
+        grid[i][j] = 0;
       }
-      rect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
     }
   }
 }
 
 function clickGrid() {
+  if (!canEdit) {
+    return;
+  }
+  cleanGrid();
   let cellWidth = width / cols;
   let cellHeight = height / rows;
   let col = floor(mouseX / cellWidth);
@@ -125,11 +124,18 @@ function updateObjectPosition(position, object) {
 
   if (object === "player") {
     if (playerPosition === null) {
-        playerPosition = position;
-        return 2;
+      playerPosition = position;
+      return 2;
     }
     if (playerPosition !== position) {
-        return -1;
+      let [x, y] = playerPosition.toString().split("").map(Number);
+      if (y === undefined) {
+        [y, x] = [x, 0];
+      }
+      grid[x][y] = 0;
+      playerPosition = position;
+
+      return 2;
     }
     playerPosition = null;
     return 0;
@@ -137,11 +143,17 @@ function updateObjectPosition(position, object) {
 
   if (object === "goal") {
     if (goalPosition === null) {
-        goalPosition = position;
-        return 3;
+      goalPosition = position;
+      return 3;
     }
     if (goalPosition !== position) {
-        return -1;
+      let [x, y] = goalPosition.toString().split("").map(Number);
+      if (y === undefined) {
+        [y, x] = [x, 0];
+      }
+      grid[x][y] = 0;
+      goalPosition = position;
+      return 3;
     }
     goalPosition = null;
     return 0;
