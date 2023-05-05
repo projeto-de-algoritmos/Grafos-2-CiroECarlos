@@ -27,6 +27,10 @@ O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o pont
 
 ## Instalação
 
+Clone o repositório.
+Certifique-se que tem conexão com internet.
+Abra o arquivo indice no navegador.
+Pronto :)
 **Linguagem**: JavaScript<br>
 
 ## Uso
@@ -35,4 +39,4 @@ O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o pont
                         <p>Selecione qual método de busca você deseja utilizar.(por enquanto apenas por profundidade)</p>
                         <p>O caminho percorrido até o ponto de chegada ficará colorido </p>
 <p>-----------------------------------------------------------------------------------------------</p>
-<p>Caso o pages esteja bugado, apenas clone o repositório e abra o index.html pelo seu navegador. Não há necessidade de fazer qualquer tipo de instalação.</p>
+<p>Caso o pages esteja bugado, apenas clone o repositório e abra o index.html pelo seu navegador. Não há necessidade de fazer qualquer tipo de instalação, apenas de internet.</p>
