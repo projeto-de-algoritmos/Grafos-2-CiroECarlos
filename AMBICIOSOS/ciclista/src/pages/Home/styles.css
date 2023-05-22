@@ -1,0 +1,65 @@
+.page.home {
+  flex-direction: row;
+  width: 90%;
+  max-width: 900px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page.home > div {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.page.home > div button, .ReactModal__Content div a {
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--brown);
+}
+
+.page.home > div button {
+  background-color: var(--baige);
+}
+
+.ReactModal__Content div a {
+  background-color: var(--green);
+
+}
+
+.page.home > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(255, 255, 255, 0.35) !important; 
+}
+
+.ReactModal__Content {
+  background-color: var(--baige) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.ReactModal__Content .home-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding-left: 1rem;
+}
+
+.ReactModal__Content img {
+  width: 80%;
+  max-width: 200px;
+  margin-left: auto;
+}
