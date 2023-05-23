@@ -14,8 +14,7 @@ export default function Home() {
         
            <Link to='/bag'><button>Preparar mochila</button></Link>
       </div>
-      <img src={ciclista} />
-    
+      <img src={ciclista} alt="ciclista"/>
     </div>
   );
 }
