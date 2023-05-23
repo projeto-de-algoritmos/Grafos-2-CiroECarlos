@@ -5,7 +5,8 @@ Tema:
 # Maior mochila possivel
 
 <!-- **Número da Lista**: 1<br> -->
-**Conteúdo da Disciplina**: Grafos<br>
+
+**Conteúdo da Disciplina**: Algoritmos Ambiciosos<br>
 
 ## Alunos
 
@@ -29,12 +30,14 @@ O nosso projeto é basicamente como achar a mochila com maior número de caloria
 [!Video demografia](https://github.com/projeto-de-algoritmos/Greed_CarlinCilcista/assets/54088490/98b83bc8-44ba-413b-a5e7-3250ee406766)
 
 ## Instalação
+
 **Linguagem**: JavaScript<br>
 **Framework**: React<br>
 
 Necessário:
- - git
- - node
+
+- git
+- node
 
 Clone o repositório.
 Dentro da pasta AMBICIOSOS/ciclista
@@ -49,7 +52,6 @@ rode o projeto
 ```
 npm run start
 ```
-
 
 ## Uso
 
