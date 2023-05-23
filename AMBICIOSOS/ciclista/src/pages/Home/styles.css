@@ -35,31 +35,3 @@
   width: 80%;
   max-width: 300px;
 }
-
-.ReactModal__Overlay {
-  background-color: rgba(255, 255, 255, 0.35) !important; 
-}
-
-.ReactModal__Content {
-  background-color: var(--baige) !important;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 700px;
-  margin: auto;
-}
-
-.ReactModal__Content .home-modal {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-  padding-left: 1rem;
-}
-
-.ReactModal__Content img {
-  width: 80%;
-  max-width: 200px;
-  margin-left: auto;
-}
