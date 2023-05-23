@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import './styles.css';
 import Form from '../../components/Form';
 import Input from '../../components/Input';
+import ItemCard from '../../components/ItemCard/ItemCard';
 import { knapsack } from '../../utils/knapsack';
 import mochilaPronta from '../../assets/images/mochilaPronta.jpeg';
 
@@ -20,6 +21,11 @@ export default function Bag() {
     setModalOpen(true);
   };
 
+  const removeItem = (index) => {
+    const filteredItens = itens.filter((i,indx) => indx !== index)
+    setItens(filteredItens)
+  }
+
   return (
     <div className='page bag'>
       <div className='description'>
@@ -32,16 +38,9 @@ export default function Bag() {
           <Form onSubmit={(item) => setItens([...itens, item])} />
         </div>
         <div className='itens-list'>
-          <h3>Lista de itens:</h3>
-          {itens.map((item) => {
-            return (
-              <div className='item-container'>
-                <p>Nome do item: {item.name}</p>
-                <p>Quantidade disponível: {item.amount}</p>
-                <p>Calorias por item: {item.calories}</p>
-              </div>
-            );
-          })}
+          {itens.map((item, indx) => (
+              <ItemCard key={indx} {...item} removeItem={()=>removeItem(indx)}/>
+            ))}
         </div>
       </div>
       <footer>
@@ -56,18 +55,16 @@ export default function Bag() {
           <div>
             <p>A mochila do Carlos possui um total de {calories} calorias. Foram adicionados:</p>
             <div className='itens-list'>
-              {bag.map((item) => {
-                return (
-                  <div>
+              {bag.map((item, indx) => (
+                  <div key={indx}>
                     <p>Nome do item: {item.name}</p>
                     <p>Quantidade adicionada: {item.amount}</p>
                   </div>
-                );
-              })}
+                ))}
             </div>
             <button onClick={() => window.location.reload()}>Reorganizar mochila</button>
           </div>
-          <img class={"mochila"}src={mochilaPronta} />
+          <img class={"mochila"}src={mochilaPronta} alt='mochila' />
         </div>
       </Modal>
     </div>
