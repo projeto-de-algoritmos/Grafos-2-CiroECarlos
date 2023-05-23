@@ -1,11 +1,10 @@
 Tema:
 
-- Grafos1
+- Greed
 
-# Labirinto
+# Maior mochila possivel
 
-Link do pages: https://caduroriz.github.io/PA-2023-01/
-**Número da Lista**: 1<br>
+<!-- **Número da Lista**: 1<br> -->
 **Conteúdo da Disciplina**: Grafos<br>
 
 ## Alunos
@@ -17,30 +16,42 @@ Link do pages: https://caduroriz.github.io/PA-2023-01/
 
 ## Sobre
 
-O nosso projeto é um labirinto. O usuário seleciona o ponto de partida, o ponto de chegada, além de colocar obstáculos onde desejar. Após isso, seleciona qual algoritmo de busca deseja utilizar(nesta primeiro projeto só há 1 algoritmo, o de busca) e o caminho feito pelo algoritmo no labirinto é mostrado.
+O nosso projeto é basicamente como achar a mochila com maior número de calorias possível para o Ciclista Carlin pelo meio do algoritmo Knapsack.
 
 ## Screenshots
 
-<img src="img/img1.png" alt="Tela inicial" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
-<img src="img/img2.png" alt="Posições escolhidas" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
-<img src="img/img3.png" alt="Caminho traçado" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+<img src="img/ambicioso1.png" alt="Tela inicial" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+<img src="img/ambicioso2.png" alt="Posições escolhidas" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+<img src="img/ambicioso3.png" alt="Caminho traçado" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
 ## Vídeo demo
-[!Video usabilidade](https://user-images.githubusercontent.com/54088490/236570022-77f872a3-1f39-4afc-90a3-2dd1a482191f.mp4)
 
 
 ## Instalação
+**Linguagem**: JavaScript<br>
+**Framework**: React<br>
+
+Necessário:
+ - git
+ - node
 
 Clone o repositório.
-Certifique-se que tem conexão com internet.
-Abra o arquivo indice no navegador.
-Pronto :)
-**Linguagem**: JavaScript<br>
+Dentro da pasta AMBICIOSOS/ciclista
+instale os pacotes
+
+```
+npm install
+```
+
+rode o projeto
+
+```
+npm run start
+```
+
 
 ## Uso
 
- <p>Selecione o local onde será o ponto de partida e o ponto de chegada. </p>
-                        <p>Selecione qual método de busca você deseja utilizar.(por enquanto apenas por profundidade)</p>
-                        <p>O caminho percorrido até o ponto de chegada ficará colorido </p>
-<p>-----------------------------------------------------------------------------------------------</p>
-<p>Caso o pages esteja bugado, apenas clone o repositório e abra o index.html pelo seu navegador. Não há necessidade de fazer qualquer tipo de instalação, apenas de internet.</p>
+<p>Insira o número de itens que a mochila aguenta </p>
+<p>Insira os itens disponíveis</p>
+<p>Clique em ver mochila para ver quais itens e quantos levar, sucesso :)</p>
