@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/osAmbiciososCarlosECiro/static/css/main.588170ca.css",
+    "main.js": "/osAmbiciososCarlosECiro/static/js/main.598277f4.js",
+    "static/media/mochilaPronta.jpeg": "/osAmbiciososCarlosECiro/static/media/mochilaPronta.8565b47f2e9b566743f3.jpeg",
+    "static/media/mochilaVazia.jpeg": "/osAmbiciososCarlosECiro/static/media/mochilaVazia.986e9d05f1d483124257.jpeg",
+    "index.html": "/osAmbiciososCarlosECiro/index.html",
+    "main.588170ca.css.map": "/osAmbiciososCarlosECiro/static/css/main.588170ca.css.map",
+    "main.598277f4.js.map": "/osAmbiciososCarlosECiro/static/js/main.598277f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.588170ca.css",
+    "static/js/main.598277f4.js"
+  ]
+}
